@@ -80,7 +80,7 @@
             <form method="post">
                 @csrf
                 <div class="form-group col-3">
-                    <input type="text" placeholder="search by name" class="form-control">
+                    <input type="text" placeholder="search by name" name="name" class="form-control">
                 </div>
                 <div class="form-group">
                     <button type="submit">search</button>
