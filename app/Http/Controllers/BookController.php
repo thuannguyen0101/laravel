@@ -17,8 +17,7 @@ class BookController extends Controller
     public function search(Request $request)
     {
         $name =  $request->get('name');
-        dd($name);
-        $lists = Book::query()->where('title', 'LIKE', '%' .$name .'%');
+        $lists = Book::query()->where('title', 'LIKE', '%' .$name .'%')->get();
         return view('index',[
             'lists'=>$lists
         ]);
